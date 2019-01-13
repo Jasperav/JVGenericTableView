@@ -1,0 +1,6 @@
+use_frameworks!
+target 'JVGenericTableView_Tests' do
+  pod 'JVGenericTableView', :path => '../'
+  
+  
+end
