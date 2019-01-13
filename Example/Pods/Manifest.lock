@@ -1,0 +1,16 @@
+PODS:
+  - JVGenericTableView (0.1.0)
+
+DEPENDENCIES:
+  - JVGenericTableView (from `../`)
+
+EXTERNAL SOURCES:
+  JVGenericTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JVGenericTableView: 0e356a61a64540590b72444464d0bea90fdf53db
+
+PODFILE CHECKSUM: fcd9a1cd4e49d5da6508cdb9777578511b03932d
+
+COCOAPODS: 1.6.0.beta.1

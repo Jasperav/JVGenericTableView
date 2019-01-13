@@ -12,14 +12,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		064AEF491839A234F7E98DF3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		064AEF491839A234F7E98DF3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* JVGenericTableView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JVGenericTableView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		931DA3969F9594554352F221 /* Pods-JVGenericTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVGenericTableView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JVGenericTableView_Tests/Pods-JVGenericTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B280B261BD1BD65C6A7A319B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B280B261BD1BD65C6A7A319B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C738054A4E1CC258DD32DF96 /* Pods-JVGenericTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVGenericTableView_Tests.release.xcconfig"; path = "Target Support Files/Pods-JVGenericTableView_Tests/Pods-JVGenericTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E2BED18856B47645581103EE /* JVGenericTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JVGenericTableView.podspec; path = ../JVGenericTableView.podspec; sourceTree = "<group>"; };
+		E2BED18856B47645581103EE /* JVGenericTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JVGenericTableView.podspec; path = ../JVGenericTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F076835643F8C1E1CEAD93C0 /* Pods_JVGenericTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JVGenericTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,6 @@
 				931DA3969F9594554352F221 /* Pods-JVGenericTableView_Tests.debug.xcconfig */,
 				C738054A4E1CC258DD32DF96 /* Pods-JVGenericTableView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,10 +130,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
