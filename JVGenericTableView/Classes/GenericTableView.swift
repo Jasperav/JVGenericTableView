@@ -17,4 +17,8 @@ open class GenericUITableView<T: UITableViewCell>: UITableView {
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func getCell(indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! T
+    }
 }
