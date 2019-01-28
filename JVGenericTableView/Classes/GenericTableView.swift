@@ -28,9 +28,11 @@ open class GenericTableView<T: UITableViewCell>: UITableView {
     }
     
     /// This has to be called when the load cell will become visible.
-    public func configureLoadCell(indexPath: IndexPath) {
+    public func configureLoadCell(indexPath: IndexPath) -> LoadCell {
         let cell = dequeueReusableCell(withIdentifier: loadCellIdentifier, for: indexPath) as! LoadCell
         
         cell.indicator.startAnimating()
+        
+        return cell
     }
 }
