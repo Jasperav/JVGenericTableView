@@ -148,10 +148,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

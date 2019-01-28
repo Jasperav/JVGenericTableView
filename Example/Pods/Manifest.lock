@@ -1,16 +1,31 @@
 PODS:
-  - JVGenericTableView (0.1.0)
+  - JVConstraintEdges (0.2.2):
+    - JVContentType
+    - JVSizeable
+  - JVContentType (0.1.7)
+  - JVGenericTableView (0.1.2):
+    - JVConstraintEdges
+  - JVSizeable (0.1.0)
 
 DEPENDENCIES:
   - JVGenericTableView (from `../`)
+
+SPEC REPOS:
+  "https://Jasperav@bitbucket.org/Jasperav/specs.git":
+    - JVConstraintEdges
+    - JVContentType
+    - JVSizeable
 
 EXTERNAL SOURCES:
   JVGenericTableView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JVGenericTableView: 0e356a61a64540590b72444464d0bea90fdf53db
+  JVConstraintEdges: 1a594996cb53977875766280fcd67e7ae2a1acc8
+  JVContentType: bf617302d029baefccde48eb79edc7634fd15f55
+  JVGenericTableView: 90f73c58a56084a84447cad28bb32d8cbacabb5e
+  JVSizeable: 1252e6b1bed411b3fc34f6119d8eaf6803876cd3
 
-PODFILE CHECKSUM: fcd9a1cd4e49d5da6508cdb9777578511b03932d
+PODFILE CHECKSUM: 9cada9cd335914368acdcecc18821a1cb49c7e24
 
 COCOAPODS: 1.6.0.beta.1
