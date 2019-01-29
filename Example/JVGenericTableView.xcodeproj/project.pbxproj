@@ -178,6 +178,7 @@
 				"${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework",
 				"${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework",
 				"${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework",
+				"${BUILT_PRODUCTS_DIR}/JVSingleParameterInitializable/JVSingleParameterInitializable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -187,6 +188,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVConstraintEdges.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVContentType.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVGenericTableView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSingleParameterInitializable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSizeable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
