@@ -25,6 +25,7 @@
 		51B60843EDD36E1030F64783620D3CB8 /* ContentTypeConstraintEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C468CF2D7DF95339844648CA19651011 /* ContentTypeConstraintEdges.swift */; };
 		58CD4C626BFC77AFEB1030FAE9877671 /* JVSizeable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F3B2F1DBDB86C7F0B1476E2DE6C692 /* JVSizeable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60ED9B09401A6CB3084B63C68BD49988 /* Pods-JVGenericTableView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 530A81E0E15C88015A0BE9F20BA8E49F /* Pods-JVGenericTableView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69037AA0220796D500DDC4CF /* GenericLoadableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69037A9F220796D400DDC4CF /* GenericLoadableTableView.swift */; };
 		6C78DD1D60C16E5A2343CF6385844A4F /* LoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B3C7A95228F1ADBD640A628282A92 /* LoadCell.swift */; };
 		6D4F2D181C6C048EAB4C2ACF784776F9 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279484079533420BA41A4F52BBB25983 /* ContentType.swift */; };
 		790DB99E538C978466409A707C5E9692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA44EA7011EAF5588F4F5D888C8A228 /* Foundation.framework */; };
@@ -139,6 +140,7 @@
 		5AFFF5624CF3D1F661FD4044462E4D32 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = JVConstraintEdges/Classes/StringExtensions.swift; sourceTree = "<group>"; };
 		5D99D57C56A81E28B80934AF8D8247CB /* UIViewFillExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewFillExtension.swift; path = JVConstraintEdges/Classes/UIViewFillExtension.swift; sourceTree = "<group>"; };
 		60DFC9038F3BC861F6DA387FC2901D26 /* JVConstraintEdges-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVConstraintEdges-dummy.m"; sourceTree = "<group>"; };
+		69037A9F220796D400DDC4CF /* GenericLoadableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenericLoadableTableView.swift; path = JVGenericTableView/Classes/GenericLoadableTableView.swift; sourceTree = "<group>"; };
 		6DA2C2E4E6616FF1A9B76D5A38850198 /* JVSingleParameterInitializable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVSingleParameterInitializable.xcconfig; sourceTree = "<group>"; };
 		6FA2A0788D0B6270119685FF08D004B5 /* JVConstraintEdges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVConstraintEdges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B071B5779DF13662140073D9A0DA3B /* JVGenericTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGenericTableView-prefix.pch"; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		78354B44FCCC5A46521C52BFA535EBE0 /* JVGenericTableView */ = {
 			isa = PBXGroup;
 			children = (
+				69037A9F220796D400DDC4CF /* GenericLoadableTableView.swift */,
 				895161AF7954E43C8F20D04F5175DFB3 /* GenericTableView.swift */,
 				954B3C7A95228F1ADBD640A628282A92 /* LoadCell.swift */,
 				3ED6BDDF9DA8371616993DC0029087E5 /* Pod */,
@@ -772,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FF9B3038677913B681457B9162058A /* GenericTableView.swift in Sources */,
+				69037AA0220796D500DDC4CF /* GenericLoadableTableView.swift in Sources */,
 				0568B6F4078A112CED72699AD13D4526 /* JVGenericTableView-dummy.m in Sources */,
 				6C78DD1D60C16E5A2343CF6385844A4F /* LoadCell.swift in Sources */,
 			);
