@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = N4EV3W64CV;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -178,7 +179,6 @@
 				"${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework",
 				"${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework",
 				"${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework",
-				"${BUILT_PRODUCTS_DIR}/JVSingleParameterInitializable/JVSingleParameterInitializable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -188,7 +188,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVConstraintEdges.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVContentType.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVGenericTableView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSingleParameterInitializable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSizeable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 931DA3969F9594554352F221 /* Pods-JVGenericTableView_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = N4EV3W64CV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -359,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C738054A4E1CC258DD32DF96 /* Pods-JVGenericTableView_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = N4EV3W64CV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

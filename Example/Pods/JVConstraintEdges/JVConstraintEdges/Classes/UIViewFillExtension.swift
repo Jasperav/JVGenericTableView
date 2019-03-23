@@ -18,7 +18,7 @@ public extension UIView {
     }
     
     func createLeadingConstraintToTrailing(toRightView: UIView, constant: CGFloat? = nil, multiplier: CGFloat? = nil) {
-         NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: toRightView, attribute: .trailing, multiplier: multiplier ?? 1, constant: constant ?? 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: toRightView, attribute: .trailing, multiplier: multiplier ?? 1, constant: constant ?? 0).isActive = true
     }
     
     func createTopConstraintToBottom(toBottomOfView: UIView, constant: CGFloat? = nil, multiplier: CGFloat? = nil) {
@@ -157,6 +157,27 @@ public extension UIView {
         
     }
     
+    func fillByAnchor(toSuperview: UIView, constraintAnchor: ConstraintAnchor = ConstraintAnchor.zero) {
+        assert(superview == nil)
+        addAsSubview(to: toSuperview)
+        
+        if let width = constraintAnchor.width {
+            widthAnchor.constraint(equalTo: toSuperview.widthAnchor, constant: width).isActive = true
+        }
+        
+        if let height = constraintAnchor.height {
+            heightAnchor.constraint(equalTo: toSuperview.heightAnchor, constant: height).isActive = true
+        }
+        
+        if let centerX = constraintAnchor.centerX {
+            centerXAnchor.constraint(equalTo: toSuperview.centerXAnchor, constant: centerX).isActive = true
+        }
+        
+        if let centerY = constraintAnchor.centerY {
+            centerYAnchor.constraint(equalTo: toSuperview.centerYAnchor, constant: centerY).isActive = true
+        }
+    }
+    
     func fill(toSuperview: UIView, edges: ConstraintEdges? = nil, addToSuperView: Bool = true, toSafeMargins: Bool = false) {
         let edgesToUse  = edges ?? ConstraintEdges.zero
         let safeGuide = toSuperview.safeAreaLayoutGuide
@@ -198,6 +219,87 @@ public extension UIView {
                 trailingAnchor.constraint(equalTo: toSuperview.trailingAnchor, constant: -trailing).isActive = true
             }
         }
+    }
+    
+    func addAsSubview(to: UIView) {
+        assert(superview == nil)
+        to.addSubview(self)
+        
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func equal(edge: ConstraintEdges, view: UIView) {
+        if let leading = edge.leading {
+            leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leading).isActive = true
+        }
+        
+        if let trailing = edge.trailing {
+            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailing).isActive = true
+        }
+        
+        if let top = edge.top {
+            topAnchor.constraint(equalTo: view.topAnchor, constant: top).isActive = true
+        }
+        
+        if let bottom = edge.bottom {
+            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottom).isActive = true
+        }
+    }
+    
+    func spacing(from: AnchorX, to: AnchorX, view: UIView, constant: CGFloat) {
+        let toAnchor: NSLayoutYAxisAnchor
+        let fromAnchor: NSLayoutYAxisAnchor
+        let _constant: CGFloat
+        
+        switch to {
+        case .top:
+            toAnchor = view.topAnchor
+        case .bottom:
+            toAnchor = view.bottomAnchor
+        }
+        
+        switch from {
+        case .top:
+            fromAnchor = topAnchor
+        case .bottom:
+            fromAnchor = bottomAnchor
+        }
+        
+        if from == .bottom && to == .top {
+            _constant = -constant
+        } else {
+            _constant = constant
+        }
+        
+        fromAnchor.constraint(equalTo: toAnchor, constant: _constant).isActive = true
+    }
+    
+    func spacing(from: AnchorY, to: AnchorY, view: UIView, constant: CGFloat) {
+        let toAnchor: NSLayoutXAxisAnchor
+        let fromAnchor: NSLayoutXAxisAnchor
+        let _constant: CGFloat
+        
+        switch to {
+        case .left:
+            toAnchor = view.leftAnchor
+        case .right:
+            toAnchor = view.rightAnchor
+        }
+        
+        switch from {
+        case .left:
+            fromAnchor = leftAnchor
+        case .right:
+            fromAnchor = rightAnchor
+        }
+        
+        if from == .right && to == .left {
+            _constant = -constant
+        } else {
+            _constant = constant
+        }
+        
+        fromAnchor.constraint(equalTo: toAnchor, constant: _constant).isActive = true
     }
     
     func equal(to: UIView, height: Bool, width: Bool) {

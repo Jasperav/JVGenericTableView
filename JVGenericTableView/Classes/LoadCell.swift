@@ -10,8 +10,7 @@ open class LoadCell: UITableViewCell {
         
         indicator.fillToMiddle(toSuperview: contentView)
         
-        // We have to do this, else we get weird warnings the debugger...
-        // contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 30).isActive = true
+        contentView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     public required init?(coder aDecoder: NSCoder) {
