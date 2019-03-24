@@ -10,7 +10,7 @@ open class LoadCell: UITableViewCell {
         
         indicator.fillToMiddle(toSuperview: contentView)
         
-        contentView.heightAnchor.constraint(equalTo: indicator.heightAnchor).isActive = true
+        contentView.heightAnchor.constraint(equalTo: indicator.heightAnchor, constant: 10).isActive = true
     }
     
     public required init?(coder aDecoder: NSCoder) {
