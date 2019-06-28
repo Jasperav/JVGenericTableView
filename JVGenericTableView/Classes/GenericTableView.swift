@@ -25,8 +25,23 @@ open class GenericTableView<T: UITableViewCell>: UITableView {
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
     }
+    
+    #if DEBUG
+    open override func register(_ cellClass: AnyClass?, forCellReuseIdentifier identifier: String) {
+        super.register(cellClass, forCellReuseIdentifier: identifier)
+        // https://stackoverflow.com/a/50798789/7715250
+        guard let registeredCellClasses = value(forKey: "_cellClassDict") as? [String: Any] else {
+            return
+        }
+        let uniqueClassNames = Set(registeredCellClasses.map { String(describing: $0.value) })
+        assert(uniqueClassNames.count == registeredCellClasses.count)
+        
+        let uniqueIdentifiers = Set(registeredCellClasses.map { String(describing: $0.key) })
+        assert(uniqueIdentifiers.count == registeredCellClasses.count)
+    }
+    #endif
     
     /// Make sure that if this tableView is loadable, you don't try to access
     /// the last cell for the indexpath while it is loading, since than you get a

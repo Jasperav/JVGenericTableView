@@ -1,19 +1,32 @@
 import UIKit
 import JVConstraintEdges
+import JVDebugProcessorMacros
 
 open class LoadCell: UITableViewCell {
     
-    let indicator = UIActivityIndicatorView(style: .gray)
+    let indicator = UIActivityIndicatorView(style: .medium)
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        indicator.fillToMiddle(toSuperview: contentView)
+        setupIndicator()
+        setupContentView()
         
-        contentView.heightAnchor.constraint(equalTo: indicator.heightAnchor, constant: 10).isActive = true
+        isUserInteractionEnabled = false
+        backgroundColor = .clear
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
+    }
+}
+
+extension LoadCell: ViewLayout {
+    private func setupIndicator() {
+        indicator.layoutInMiddle(inView: contentView)
+    }
+    
+    private func setupContentView() {
+        contentView.layoutEqualHeight(view: indicator, constant: 10)
     }
 }
